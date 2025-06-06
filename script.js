@@ -43,7 +43,7 @@ async function handleSignUp() {
         showDialog("Re-enetered password mismtach!")
         return; // Add a return here to stop further execution if passwords don't match
     } else if (!strongPasswordRegex.test(passwordInput)) {
-        showDialog("Password must contain atleast one:<br/>number, special character, uppercase letter & lowercase letter")
+        showDialog("<b>Strong password needed!</b><br/>Password must contain <b>atleast one</b>:<br/><b>number</b>, <b>special character</b>, <b>uppercase letter</b> & <b>lowercase letter</b><br/>Should be <b>8 characters</b> long")
         return; // Add a return here to stop further execution if passwords don't match
     } else {
         //Sign Up Logic
@@ -56,7 +56,7 @@ async function handleSignUp() {
                     data: {
                         name: nameInput,
                         mobile: mobileInput, // Store as string if not using for calculations
-                        age: ageInput ? parseInt(ageInput, 10) : null // Convert age to a number, or null if empty
+                        age: ageInput ? parseInt(ageInput, 10) : null // Convert age to a number or null if empty
                     }
                 }
             });
@@ -145,7 +145,7 @@ async function handleUpdatePassword() {
         showDialog("Re-enetered password mismtach!")
         return; 
     } else if (!strongPasswordRegex.test(passwordInput)) {
-        showDialog("Password must contain atleast one:<br/>number, special character, uppercase letter & lowercase letter")
+        showDialog("<b>Strong password needed!</b><br/>Password must contain <b>atleast one</b>:<br/><b>number</b>, <b>special character</b>, <b>uppercase letter</b> & <b>lowercase letter</b><br/>Should be <b>8 characters</b> long")
         return;
     }
 
