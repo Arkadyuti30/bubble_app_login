@@ -13,7 +13,7 @@ body {
 }
 
 .header, .input-wrapper {
-    margin-top: 2vh;
+    margin-top: -2vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +31,7 @@ body {
 }
 
 .input-wrapper {
-    margin-top: -7vh;
+    margin-top: -14vh;
 }
 
 .ip-box {
@@ -49,7 +49,7 @@ body {
 .cta {
     background-color: #f99f38;
     width: 60vw;
-    height: 4vh;
+    height: 5vh;
     font-size: 20px;
     font-family: NunitoSans;
     margin-top: 2vh;
@@ -127,7 +127,7 @@ dialog {
 /* Google Sign-in Button Specific Styles */
 .google-style-button {
     width: 60vw;
-    height: 4vh;
+    height: 5vh;
     padding: 15px 20px;
     background-color: #4285F4; /* Google blue */
     color: white; /* White text for contrast */
