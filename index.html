@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KISS Device Login</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+    <body>
+        <div id="top-img-holder">
+            <img src="images/login_pink_alien.png" class="floating-img"/>
+            <img src="images/login_bird.png" class="floating-img"/>
+        </div>
+
+        </div>
+        <div class="header">
+            <span>KISS</span><br>
+            <span>Device</span>
+        </div>
+        <div id="middle-img-holder">
+            <img src="images/login_alien.png" class="floating-img"/>
+        </div>
+        <div class="input-wrapper">
+            <img src="images/login_person.png">
+            <input id="email-ip" class = "ip-box" placeholder="Email address"/>
+            <input id="password-ip" class = "ip-box" placeholder="Password" type="password"/>
+            <div id="login-cta" class="cta" onclick="handleSignIn()">Log In</div>
+            <span class="footer-text">OR</span>
+            <a id="signup-cta" class="cta" href="signup.html">Sign Up</a>
+            <a id="link" href="forgot-password.html">Forgot Password?</a>
+            <div id="google-signin-btn" class="cta google-style-button" onclick="handleGoogleSignIn()">
+                <img src="images/google_icon.png" alt="Google Icon">
+                Continue with Google
+            </div>
+        </div>
+
+        <dialog>
+            <p id="dialog-text"></p>
+            <button class="cta dialog-button" autofocus>Okay</button>
+        </dialog>
+        <script src="https://unpkg.com/@supabase/supabase-js@2" defer></script>
+        <script src="script.js" defer></script>
+    </body>
+</html>
