@@ -56,7 +56,7 @@ async function handleSignUp() {
                     data: {
                         name: nameInput,
                         mobile: mobileInput, // Store as string if not using for calculations
-                        age: ageInput ? parseInt(age, 10) : null // Convert age to a number, or null if empty
+                        age: ageInput ? parseInt(ageInput, 10) : null // Convert age to a number, or null if empty
                     }
                 }
             });
