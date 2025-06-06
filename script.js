@@ -102,7 +102,6 @@ async function handleSignIn() {
 }
 
 async function handleSignOut() {
-    showDialog("Signing out...", false);
     try {
         const { error } = await _supabase.auth.signOut();
         if (error) {
