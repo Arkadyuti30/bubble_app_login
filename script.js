@@ -95,7 +95,7 @@ async function handleSignIn() {
         showDialog(`<b>Sign up error:</b> ${error.message}`);
         console.error('Sign in error:', error.message);
     } else {
-        window.location.pathname = "success.html"
+        window.location.pathname = "bubble_app_login/success.html"
         console.log('Sign in data:', data);
         
     }
@@ -109,7 +109,7 @@ async function handleSignOut() {
             showDialog(`<b>Sign out error:</b> ${error.message}`);
         } else {
             // Redirect to login page after sign out
-            window.location.pathname = 'index.html'; // Or login page
+            window.location.pathname = 'bubble_app_login/index.html'; // Or login page
         }
     } catch (err) {
         showDialog(`<b>An unexpected error occurred:</b> ${err.message}`);
@@ -126,7 +126,7 @@ async function handleForgotPassword() {
 
     try {
         const { error } = await _supabase.auth.resetPasswordForEmail(email, {
-            redirectTo: window.location.origin + '/update-password.html' // URL where user will land after clicking reset link
+            redirectTo: window.location.origin + '/bubble_app_login/update-password.html' // URL where user will land after clicking reset link
         });
         if (error) {
             showDialog(`<b>Error:</b> ${error.message}`);
@@ -159,7 +159,7 @@ async function handleUpdatePassword() {
             showDialog(`Failed to update password: ${error.message}`, true);
         } else {
             showDialog("Password updated successfully! You can now log in with your new password.", false);
-            window.location.pathname = 'index.html';
+            window.location.pathname = 'bubble_app_login/index.html';
         }
     } catch (err) {
         showDialog(`An unexpected error occurred: ${err.message}`, true);
@@ -176,7 +176,7 @@ async function handleGoogleSignIn() {
                 // It should be a page in YOUR app where you want the user to land
                 // after a successful Google login/signup.
                 // For example, your dashboard or main app page.
-                redirectTo: window.location.origin + '/success.html'
+                redirectTo: window.location.origin + '/bubble_app_login/success.html'
             }
         });
 
