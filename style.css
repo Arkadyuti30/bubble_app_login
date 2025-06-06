@@ -49,10 +49,10 @@ body {
 .cta {
     background-color: #f99f38;
     width: 60vw;
-    height: 7vh;
+    height: 4vh;
     font-size: 20px;
     font-family: NunitoSans;
-    margin-top: 4vh;
+    margin-top: 2vh;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -127,7 +127,7 @@ dialog {
 /* Google Sign-in Button Specific Styles */
 .google-style-button {
     width: 60vw;
-    height: 5vh;
+    height: 4vh;
     padding: 15px 20px;
     background-color: #4285F4; /* Google blue */
     color: white; /* White text for contrast */
